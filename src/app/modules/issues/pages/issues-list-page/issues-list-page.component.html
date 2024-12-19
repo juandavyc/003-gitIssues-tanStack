@@ -1,0 +1,35 @@
+<h1>git issues</h1>
+<div class="my-5 border-b-2 border-blue-600"></div>
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+  <div class="flex flex-col col-span-3">
+    <div class="flex gap-2">
+      <button class="btn">All</button>
+      <button class="btn">Open</button>
+      <button class="btn">Closed</button>
+    </div>
+  </div>
+  <div class="mt-4 flex flex-col col-span-2">
+    <h3>issues: </h3>
+    <a routerLink="/issue/123" >Ir a Issues 123</a>
+    @for (issue of issuesQuery.data(); track issue.id) {
+      <issue-item [issue]="issue" />
+    }@empty {
+      @if(issuesQuery.isLoading()){
+        <p>Cargando issues</p>
+      }
+      @else{
+        <p>No hay issues para mostrar</p>
+      }
+    }
+
+  </div>
+  <div>
+    @if(labelsQuery.isLoading()){
+      <p>Cargando..</p>
+    }
+    @else {
+      <issues-labels-selector [labels]="labelsQuery.data() ?? []"/>
+    }
+  </div>
+</div>
