@@ -4,14 +4,13 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'issue-item',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink
-  ],
-  templateUrl: './issue-item.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'issue-item',
+    imports: [
+        CommonModule,
+        RouterLink
+    ],
+    templateUrl: './issue-item.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IssueItemComponent {
 

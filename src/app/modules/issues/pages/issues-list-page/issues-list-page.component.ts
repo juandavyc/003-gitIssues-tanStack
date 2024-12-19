@@ -6,18 +6,16 @@ import { LabelsSelectorComponent } from '../../components/labels-selector/labels
 import { IssueItemComponent } from '../../components/issue-item/issue-item.component';
 
 @Component({
-  selector: 'app-issues-list-page',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    //
-    IssueItemComponent,
-    LabelsSelectorComponent,
-
-  ],
-  templateUrl: './issues-list-page.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-issues-list-page',
+    imports: [
+        CommonModule,
+        RouterLink,
+        //
+        IssueItemComponent,
+        LabelsSelectorComponent,
+    ],
+    templateUrl: './issues-list-page.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class IssuesListPageComponent {
 

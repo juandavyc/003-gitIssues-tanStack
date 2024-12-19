@@ -3,13 +3,12 @@ import { GithubLabel } from '../../interfaces';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'issues-labels-selector',
-  standalone: true,
-  imports: [
-    CommonModule
-  ],
-  templateUrl: './labels-selector.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'issues-labels-selector',
+    imports: [
+        CommonModule
+    ],
+    templateUrl: './labels-selector.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LabelsSelectorComponent {
 

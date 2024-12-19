@@ -4,5 +4,8 @@
             "skipStyle": true,
             "externalTemplate": true
         }
-    }
+    },
+    "exportall.config.relExclusion": [
+        "/src/app/modules/issues/interfaces/index.ts"
+    ]
 }
